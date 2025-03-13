@@ -56,3 +56,9 @@ for num in nums:
     count[num] = 1 + count.get(num, 0)
 
 # ----------- HEAPS ------------
+
+
+# ----------- STACKS ------------
+stack = []
+stack.append(1)
+topofstack = stack.pop()
