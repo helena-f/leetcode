@@ -25,3 +25,20 @@ class Solution:
             left -= 1
             right += 1
         return True
+    
+class Solution(object):
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        s = ''.join(c.lower() for c in s if c.isalnum())
+        mid = len(s) // 2
+        tail = len(s) 
+
+        for i in range(mid):  
+            tail -= 1    
+            if s[i] != s[tail]:
+                return False
+        
+        return True
