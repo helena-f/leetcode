@@ -1,0 +1,1 @@
+# monotonic decreasing or equal stack
