@@ -23,7 +23,20 @@
 # 0 <= strs[i].length <= 100
 # strs[i] is made up of lowercase English letters.
 
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        groups = {}
+        for string in strs:
+            chars = "".join(sorted(string))
+            if chars not in groups.keys():
+                groups[chars] = [string]
+            else: 
+                groups[chars].append(string)
 
+        group_list = list(groups.values())
+        return group_list
+
+        
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         

@@ -31,3 +31,16 @@ class Solution:
             if slow == fast:
                 return True
         return False
+
+         # visited = set()
+        # if not head:
+        #     return False
+
+        # while head:
+        #     if head in visited:
+        #         return True
+            
+        #     visited.add(head)
+        #     head = head.next
+
+        # return False
