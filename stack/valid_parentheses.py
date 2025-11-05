@@ -46,3 +46,17 @@ class Solution:
             return False
         return True
             
+        class Solution:
+    def isValid(self, s: str) -> bool:
+        bracket_map = {")":"(", "}":"{", "]": "["}
+
+        stack = []
+
+        for ch in s:
+            if ch in bracket_map.values():
+                stack.append(ch)
+            elif not stack or stack.pop() != bracket_map[ch]:
+                return False
+        if len(stack) != 0:
+            return False
+        return True
