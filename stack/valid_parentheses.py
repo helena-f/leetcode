@@ -7,6 +7,27 @@
 # Open brackets are closed in the correct order.
 # Every close bracket has a corresponding open bracket of the same type.
 # Return true if s is a valid string, and false otherwise.
+
+stack = []
+        p_map = {
+            ')': '(',
+            ']': '[',
+            '}': '{'
+        }
+
+        for c in s:
+            if c in p_map and len(stack) > 0:
+                last_open = stack.pop()
+
+                if last_open != p_map[c]:
+                    return False
+            else:
+                stack.append(c)
+
+        return not stack
+
+
+
 class Solution(object):
     def isValid(self, s):
         """
